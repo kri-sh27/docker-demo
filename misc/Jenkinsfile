@@ -12,7 +12,7 @@ node {
      }
    }
    stage('docker build/push') {
-     docker.withRegistry('https://index.docker.io/v2/', 'dockerhub') {
+     docker.withRegistry('https://index.docker.io/v2/', '658f3813-567e-493b-9467-fed8f4ed75f0') {
        def app = docker.build("krishnahogale/docker-nodejs-demo:${commit_id}", '.').push()
      }
      }
